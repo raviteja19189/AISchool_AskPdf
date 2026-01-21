@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskPdf</title>
+    
+    <!-- PDF.js Core Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      // Initialize PDF.js Worker
+      if (window['pdfjs-dist/build/pdf']) {
+        window.pdfjsLib = window['pdfjs-dist/build/pdf'];
+      }
+      if (window.pdfjsLib) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+    </script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "next": "https://esm.sh/next@^16.1.4",
+        "next/": "https://esm.sh/next@^16.1.4/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "chart.js": "https://esm.sh/chart.js@^4.4.1",
+        "react-chartjs-2": "https://esm.sh/react-chartjs-2@^5.2.0"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
